@@ -6,38 +6,48 @@
     <body>
         <!-- coder comment-->
          Balatro Form
-         
-          <form>
+          <br><br><form>
 
-    Username: <input type="text" id="firstname"> <br><br>
+    Username: <input type="text" id="username"> <br><br>
+    
+    Do you like gambling roguelites? <input type="checkbox" id="Gambler"> <br>
+    <br> Have you played Balatro? <br>
+    <input type="button" name="button" id="name" onclick="window.alert('Nice.')" value="Yes.">
+    <input type="button" name="button" id="name" onclick="window.alert('You should play it. Its only like, $20')" value="No."><br><br>
 
-    Have you played Balatro? <input type="checkbox" id="Yes"> <br><br>
+<!-- This text box is only intended for those who have played Balatro-->
+      
+    <textarea name="message" rows="10" cols="30" id="largetextarea">
+Tell me why you like Balatro if you have played it.
+
+Type here:
+
+    </textarea> <br><br>
+
+     <!--Again only for if you have played Balatro-->
 
     Best stake completion? <br>
 
-    None <input type="radio" name="gender" value="None" id="stakeNone"> <br>
-    White <input type="radio" name="gender" value="white" id="stakeWhite"> <br>
-    Red <input type="radio" name="gender" value="red" id="stakeRed"> <br>
-    Green <input type="radio" name="gender" value="green" id="stakeGreen"> <br>
-    Black <input type="radio" name="gender" value="black" id="stakeBlack"> <br>
-    Blue <input type="radio" name="gender" value="blue" id="stakeBlue"> <br>
-    Purple <input type="radio" name="gender" value="purple" id="stakePurple"> <br>
-    Orange <input type="radio" name="gender" value="orange" id="stakeOrange"> <br>
-    Gold <input type="radio" name="gender" value="gold" id="stakeGold"> <br><br>
+    None <input type="radio" name="stake" value="None" id="stakeNone"> <br>
+    White <input type="radio" name="stake" value="white" id="stakeWhite"> <br>
+    Red <input type="radio" name="stake" value="red" id="stakeRed"> <br>
+    Green <input type="radio" name="stake" value="green" id="stakeGreen"> <br>
+    Black <input type="radio" name="stake" value="black" id="stakeBlack"> <br>
+    Blue <input type="radio" name="stake" value="blue" id="stakeBlue"> <br>
+    Purple <input type="radio" name="stake" value="purple" id="stakePurple"> <br>
+    Orange <input type="radio" name="stake" value="orange" id="stakeOrange"> <br>
+    Gold <input type="radio" name="stake" value="gold" id="stakeGold"> <br><br>
 
+    <!--I'd like to see your opinion-->
 
     Which is the better joker? <br>
 
        <select name="Best_Jokers" id="Best_Jokers">
-
             <option value="Blueprint">Blueprint</option>
-
             <option value="Brainstorm">Brainstorm</option>
-
+            <option value="Invisible_Joker">Invisible Joker</option>
        </select> <br><br>
-
-       <input type="submit" value="Submit" id="submit_button"> <br>
-
+       <input type="submit" value="Submit" id="submit_button"><br><br>
   </form>
 
     </body> 
