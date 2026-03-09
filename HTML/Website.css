@@ -53,7 +53,7 @@ h1{
 }
 /* this is literally just for the word polychrome lol */
 .animated-rainbow-text {
-    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red);
+    background: linear-gradient(to right, red, rgb(255, 136, 0), yellow, green, blue, indigo, violet, red);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
