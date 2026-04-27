@@ -4,7 +4,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 30pt;
+    font-size: 20pt;
     font-weight: bold;
     background-size: 400% 100%;
     animation: rainbow_animation 7.25s linear infinite;
@@ -18,7 +18,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    font-size: 40pt;
+    font-size: 25pt;
     font-weight: bold;
     background-size: 400% 100%;
     animation: rainbow_animation 7s linear infinite;
