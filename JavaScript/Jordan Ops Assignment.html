@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>Jordan Ops Assignment</title> 
+    </head>
+    <link rel="stylesheet" href="Ops.css">
+    <body>
+        <p id="result1"></p>
+        <p id="result2"></p>
+        <p id="result3"></p>
+        <p id="result4"></p>
+        <p id="result5"></p>
+        <p id="result6"></p>
+        <p id="result7"></p>
+        <p id="result8"></p>
+        <p id="result9"></p>
+        <p id="result10"></p>
+    <script>
+            let numberA = parseFloat(window.prompt ("Please add a number"))
+            let numberB = parseFloat(window.prompt ("Please add another number"))
+            let result = 0
+
+            //Math1
+            result = numberA + numberB
+            document.getElementById("result1").innerHTML =  "<span class='animated-red-text'>" + numberA + "</span>" + " + " + "<span class='animated-red-text'>" + numberA + "</span>" + " is " + "<span class='animated-blue-text'>" + result + "</span>"
+
+            //Math2
+            result = numberA - numberB
+            document.getElementById("result2").innerHTML =  " The value of " + numberA + " - " + numberB + " is " + result
+
+            //Math3
+            result = numberA * numberB
+            document.getElementById("result3").innerHTML =  " The value of " + numberA + " * " + numberB + " is " + result
+
+            //Math4
+            result = numberA / numberB
+            document.getElementById("result4").innerHTML =  " The value of " + numberA + " / " + numberB + " is " + result
+
+            //Math5
+            result = numberA % numberB
+            document.getElementById("result5").innerHTML =  " The value of " + numberA + " % " + numberB + " is " + result
+
+            //Math6
+            result = numberA == numberB
+            document.getElementById("result6").innerHTML =  "<span class='animated-red-text'>" + numberA + "</span>" + " == " + "<span class='animated-red-text'>" + numberB + "</span>" + " is "  + "<span class='animated-blue-text'>" + result + "</span>"
+
+            //Math7
+            result = numberA != numberB
+            document.getElementById("result7").innerHTML = + numberA + " != " + numberB + " is " + result
+
+            //Math8
+            result = numberA > numberB
+            document.getElementById("result8").innerHTML = + numberA + " > " + numberB + " is " + result
+
+            //Math9
+            result = numberA < numberB
+            document.getElementById("result9").innerHTML = + numberA + " < " + numberB + " is " + result
+
+            //Math10
+            result = numberA <= numberB
+            document.getElementById("result10").innerHTML = + numberA + " <= " + numberB + " is " + result
+
+    </script>
+    </body> 
+</html>

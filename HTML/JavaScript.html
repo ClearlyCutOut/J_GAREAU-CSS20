@@ -2,6 +2,18 @@
 <html> 
     <head>
         <title>JavaScript</title> 
+
+            <!-- Part of CTC 4-->
+
+        <script>
+
+          function greetingWithNumbers (number1, number2) 
+          {
+                     window.alert ("Hi there! The numbers you entered are " + number1 + "and " + number2)
+             }
+
+        </script>
+
     </head>
     <body>
         <!-- :P -->
@@ -26,11 +38,23 @@
 
     //CTC-3
 
-        let fullName = "Demetrius Demarcus Bartholemew James III Jr."
+        let fullName = "<b>Demetrius Demarcus Bartholemew James III Jr."
         document.getElementById("p3").innerHTML=fullName
 
 
     //CTC-4
+
+        greetingWithNumbers (5, 10)
+         
+            function adding(number1, number2)
+            {
+                      let answer
+                      answer = number1 + number2
+                      return answer
+            }       
+             let value
+                value = adding(10, 5)
+
 
 </script>
     </body> 
