@@ -6,25 +6,40 @@
             <!-- Part of CTC 4-->
 
         <script>
+            
+            function adding(number1, number2)
+            {
+                let answer
+                answer = number1 * number2
+                return answer
+            }    
 
-          function greetingWithNumbers (number1, number2) 
-          {
-                     window.alert ("Hi there! The numbers you entered are " + number1 + "and " + number2)
-             }
+            function greetingWithNumbers (number1, number2, answer) 
+          
+            {   
+
+            window.alert ("AHOY MATEY! The numbers you entered are " + number1 + " and " + number2 + " and when multiplied, the answer is " + answer )
+
+            }
 
         </script>
 
     </head>
     <body>
         <!-- :P -->
-         <p id="p1"> Uh I was never here </p>
-         <p id="p2"> Neither was I </p>
-         <p id="p3"> Some guy I found </p>
+         <p id="p1"> Text 1 </p>
+         <p id="p2"> Text 2 </p>
+         <p id="p3"> Text 3 </p>
 <script>
+
+            let number1 = parseFloat(window.prompt ("Please add a number"))
+            let number2 = parseFloat(window.prompt ("Please add another number"))
+            let result = 0
+            let answer = 0
  
     //CTC-1
 
-        document.write ("hello world") 
+        document.write ("<i>hello world") 
         document.getElementById("p1").innerHTML = "Uh hi I guess"
         document.getElementById("p2").innerHTML = "Why are you even here?"
 
@@ -44,18 +59,12 @@
 
     //CTC-4
 
-        greetingWithNumbers (5, 10)
-         
-            function adding(number1, number2)
-            {
-                      let answer
-                      answer = number1 + number2
-                      return answer
-            }       
-             let value
-                value = adding(10, 5)
+        result = adding(3, 5)
+        greetingWithNumbers (3, 5, result)
+        answer = adding(number1, number2)
+        greetingWithNumbers (number1, number2, answer)
 
 
 </script>
     </body> 
-</html>
+</html> 
