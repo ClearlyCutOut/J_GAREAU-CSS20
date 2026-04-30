@@ -2,9 +2,32 @@
 <html> 
     <head>
         <title>Sphere Collection</title>
-
+        <script>
+            const pi = 3.14159265
+            function area(radius){ 
+                let result = 4 * pi * (radius**2)
+                return result
+            }
+            function volume(radius){ 
+                let result = (4/3) * pi * (radius**3)
+                return result
+            }
+        </script>
     </head>
     <body>
+            <p id="p1"> Text 1 </p>
+            <p id="p2"> Text 2 </p>
+            <p id="p3"> Text 3 </p>
+            <p id="p4"> Text 4 </p>
+        <script>
+           let num1 = parseFloat(window.prompt ("Pick your first radius", "number"))
+           let num2 = parseFloat(window.prompt ("Pick your other radius", "number"))
 
+           document.getElementById("p1").innerHTML = "Area of a sphere with the radius of " + num1 + " is " + area(num1)
+           document.getElementById("p2").innerHTML = "Area of a sphere with the radius of " + num2 + " is " + area(num2)
+           document.getElementById("p3").innerHTML = "Volume of a sphere with the radius of " + num1 + " is " + volume(num1)
+           document.getElementById("p4").innerHTML = "Volume of a sphere with the radius of " + num2 + " is " + volume(num2)
+
+        </script>
     </body> 
 </html> 
