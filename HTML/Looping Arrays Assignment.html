@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>The Array Makes Me Loopy</title> 
+
+    </head>
+    <body>
+
+        <p id="p1"> Text 1 </p>
+        <p id="p2"> Text 2 </p>
+
+        <script>
+
+            let games = []
+            games[0] = window.prompt("Name A Video Game")
+            games[1] = window.prompt("Name Another Video Game")
+            games[2] = window.prompt("Name Another Video Game")
+            games[3] = window.prompt("Name Another Video Game")
+            document.getElementById("p1").innerHTML = games
+            document.getElementById("p2").innerHTML = games.length
+
+
+
+        </script>
+    </body> 
+</html> 
