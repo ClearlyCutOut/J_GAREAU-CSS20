@@ -5,21 +5,24 @@
 
     </head>
     <body>
-
-        <p id="p1"> Text 1 </p>
-        <p id="p2"> Text 2 </p>
-
         <script>
 
-            let games = []
-            games[0] = window.prompt("Name A Video Game")
-            games[1] = window.prompt("Name Another Video Game")
-            games[2] = window.prompt("Name Another Video Game")
-            games[3] = window.prompt("Name Another Video Game")
-            document.getElementById("p1").innerHTML = games
-            document.getElementById("p2").innerHTML = games.length
+            let i = 0
+            let grade = []
+            grade[0] = "Comp Science"
+            grade[1] = "Gym"
+            grade[2] = "Science"
+            grade[3] = "Catholic Studies"
 
+            let message2 = ""
+            for (i = 0; i < 4; i++)
 
+            {
+                grade[i] = window.prompt ("Please imput a number")
+                message2 += "GRADE " + i + " is " + grade + "______"
+            }
+
+            document.write (message2)
 
         </script>
     </body> 
