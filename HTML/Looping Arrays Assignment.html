@@ -2,30 +2,34 @@
 <html> 
     <head>
         <title>The Array Makes Me Loopy</title> 
+        <style>
+            body {background-color: blueviolet;}
+ 
+        </style>
 
     </head>
     <body>
-
+        
         <p id="p1"> Name </p>
         <p id="p2"> Grades </p>
         <p id="p3"> Average </p>
         
         <script>
 
-            let i = 0
-            let name = window.prompt("H U M A N... E N T E R  Y O U R  N A M E")
+            let i = 1
             let grade = []
-            for (i = 0; i < 4; i++)
+            grade[0] = window.prompt("Enter thy name")
+            for (i = 1; i < 5; i++)
 
             {
                 grade[i] = parseFloat(window.prompt("Please imput a number"))
             }
 
-            let gradeAverage = (grade[0] + grade[1] + grade[2] + grade[3]) /4
+            let gradeAverage = (grade[1] + grade[2] + grade[3] + grade[4]) /4
 
-            document.getElementById("p1").innerHTML = name 
-            document.getElementById("p2").innerHTML = "Your grades are: " + grade
-            document.getElementById("p3").innerHTML = "You average is: " + gradeAverage + "%"
+            document.getElementById("p1").innerHTML = grade[0]
+            document.getElementById("p2").innerHTML = "Your grades are: " + "<span style='color: red;'>" + grade[1] + "</span>" + ", " + "<span style='color: blue;'>" + grade[2] + "</span>" + ", " + "<span style='color: yellow;'>" + grade[3] + "</span>" + ", " + "<span style='color: yellowgreen;'>" + grade[4] + "</span>"
+            document.getElementById("p3").innerHTML = "You average is: " + "<span style='color: orange;'>" + gradeAverage + "%" + "</span>"
 
         </script>
     </body> 
