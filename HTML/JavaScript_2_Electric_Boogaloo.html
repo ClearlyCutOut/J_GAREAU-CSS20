@@ -15,7 +15,7 @@
 
             //CTC-1
 
-            /*/  
+            /* Honestly kinda just simple
             let games = []
             games[0] = window.prompt("Name A Video Game")
             games[1] = window.prompt("Name Another Video Game")
@@ -23,13 +23,14 @@
             games[3] = window.prompt("Name Another Video Game")
             document.getElementById("p1").innerHTML = games
             document.getElementById("p2").innerHTML = games.length  
-            /*/
+            */
 
 
             //CTC-2
 
 
             
+            /* Again, kinda just simple. I suck at explaining things
             let i = 0
             let imput = []
             let message2 = ""
@@ -40,10 +41,59 @@
                 message2 += "The value of array index value " + i + " is " + imput[i] + "<br>"
             }
 
-            document.write (message2)
+            document.write (message2)*/
 
+            </script>
 
+            <p id="p3"> Name </p>
+            <p id="p4"> Grades </p>
+            <p id="p5"> Average </p>
+            <p id="p6"> Message </p>
+        
+        <script>
+
+            let i = 1
+            let grade = []
+            grade[0] = window.prompt("Enter thy name")
+            for (i = 1; i < 5; i++)
+
+            {
+                grade[i] = parseFloat(window.prompt("Please imput a number"))
+            }
+
+            let gradeAverage = (grade[1] + grade[2] + grade[3] + grade[4]) /4
+
+            document.getElementById("p3").innerHTML = grade[0]
+            document.getElementById("p4").innerHTML = "Your grades are: " + "<span style='color: red;'>" + grade[1] + "</span>" + ", " + "<span style='color: blue;'>" + grade[2] + "</span>" + ", " + "<span style='color: yellow;'>" + grade[3] + "</span>" + ", " + "<span style='color: yellowgreen;'>" + grade[4] + "</span>"
+            
+
+            if (gradeAverage > 100) 
+            // This is for if you cheated and did better than you should've. Color is cyan because it's kinda like a diamond
+            {
+                document.getElementById("p5").innerHTML = "Your average is: " + "<span style='color: cyan;'>" + gradeAverage + "%" + "</span>"
+                document.getElementById("p6").innerHTML = "The heck?!?!?!? Tell me you cheated without telling me you cheated. OH WAIT you don't have to because I know where you live! *Sends nuclear bomb to your house*"
+            }
+            else if (gradeAverage <= 100 &&  gradeAverage > 75 ) 
+            // This is for when you passed good enough. Color is gold because you win
+            {
+                document.getElementById("p5").innerHTML = "Your average is: " + "<span style='color: gold;'>" + gradeAverage + "%" + "</span>"
+                document.getElementById("p6").innerHTML = "Congratulations! You beat school! Time to go get a job."
+            }
+            else if (gradeAverage <= 75 &&  gradeAverage > 50 ) 
+            // This is for when you barely passed. Color is silver because you barely won
+            {
+                document.getElementById("p5").innerHTML = "Your average is: " + "<span style='color: silver;'>" + gradeAverage + "%" + "</span>"
+                document.getElementById("p6").innerHTML = "Please get better soon."
+            }
+            else if (gradeAverage <= 50) 
+            // This is for when you failed. Color is maroon because you lost
+            {
+                document.getElementById("p5").innerHTML = "Your average is: " + "<span style='color: maroon;'>" + gradeAverage + "%" + "</span>"
+                document.getElementById("p6").innerHTML = "Uh. Skissue."
+            }
+
+          
 
         </script>
     </body> 
-</html> 
+</html>
