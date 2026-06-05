@@ -4,28 +4,37 @@
     <!--CTC-1--> <script> 
 
 
-          /* function event1()
+          function event1()
           {
               window.alert("Good job! You did it!")
           }
           function event2()
           {
               window.alert("Good job! You didn't it!")
-          }       */
+          }       
 
 
-           /* CTC-2 
+           // CTC-2 
 
 
         function message2(form)
       {
             window.alert(document.getElementById("firstname").value)
             window.alert(document.getElementById("check").checked)
-      } */
+      } 
+
+           // CTC-3
 
       function message3()
       {
-            window.alert(document.getElementById("button5").style.background = "blue")
+            window.alert("You hath clicked thine button")
+            window.alert("Prepare the world for the creation God himself fears...")
+            window.alert("You did this to yourself...")
+            document.getElementById("button5").style.background = "blue"
+            document.getElementById("button5").style.color = "red"
+            document.getElementById("button5").style.fontFamily = "Wingdings"
+            document.getElementById("button5").style.transform = "rotate(90deg)"
+            document.getElementById("button5").style.margin = "100px"
       } 
 
 
@@ -37,36 +46,48 @@
   
   
   
-              <!--   CTC-1
+              <!--   CTC-1   -->
 
-    <b>Click this button to do it</b>
+       Click this button to do it
 
       <input type="button" value="Buttoin 1" id="button1" onclick="event1()"> <br><br>
 
-    <i>Click this button to do'nt it</i>
+    <i>Double click this button to do'nt it</i>
 
-      <input type="button" value="Buttoin 2" id="button2" ondblclick="event2()">
-      <input type="button" value="Buttoin 2" id="button2" ondblclick="event2()">  -->
+      <input type="button" value="Buttoin 2" id="button2" ondblclick="event2()"> <br><br>
+
+    <b>Hover over this button to do it</b>
+
+      <input type="button" value="Buttoin 3" id="button3" onmouseover="event1()"> <br><br>
 
 
-              <!--   CTC-2   
+              <!--   CTC-2   -->
 
 
         <form id="form1">
+
         Just put text here: <input type="text" id="firstname">
-        <input type="checkbox" id="check"> <br>
-        <input type="button" id="button1" value="ok" onclick="message2(this.form)" >
-        </form> -->
+
+        <input type="checkbox" id="check"> <br><br>
+
+        Click "ok" to ok
+
+        <input type="button" id="button1" value="ok?" onclick="message2(this.form)" ><br><br>
+
+        </form>
 
 
         <!--      CTC-3      -->
 
         
-        <input type="button" id="button5" value="properties" onclick="message3()" >
+        <input type="button" id="button5" value="properties" onclick="message3()"><br>
 
-
-
-
+            <p>Clicking the properties button will:<br>
+            Change the button background blue,<br>
+            Change the text colour red,<br>
+            Change the font to Wingdings,<br>
+            Rotate the button by 90 degrees,<br>
+            And lastly, make it 100px away from the wall.</p>
 
 </body> 
 </html>
