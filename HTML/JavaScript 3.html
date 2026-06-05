@@ -17,11 +17,16 @@
            /* CTC-2 
 
 
-        function message1(form)
+        function message2(form)
       {
             window.alert(document.getElementById("firstname").value)
             window.alert(document.getElementById("check").checked)
       } */
+
+      function message3()
+      {
+            window.alert(document.getElementById("button5").style.background = "blue")
+      } 
 
 
 
@@ -50,14 +55,14 @@
         <form id="form1">
         Just put text here: <input type="text" id="firstname">
         <input type="checkbox" id="check"> <br>
-        <input type="button" id="button1" value="ok" onclick="message1(this.form)" >
+        <input type="button" id="button1" value="ok" onclick="message2(this.form)" >
         </form> -->
 
 
         <!--      CTC-3      -->
 
-
-        <input type="button" id="button1" value="properties" onclick="message1" >
+        
+        <input type="button" id="button5" value="properties" onclick="message3()" >
 
 
 
