@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html> 
+    <head> <title>RNG Gaeming</title>
+
+</head>
+
+<body style="background-color: maroon;">
+  
+      <h1 style="text-align: center; font-size: 38pt;">Welcome to my RANDOM NUMBER GUESSING GAME</h1>
+             <ul style="text-align: center;font-size: 20pt;"> 
+                  <li>Rules are simple!</li>
+                  <li>Enter a minimum number</li>
+                  <li>Enter a maximum number</li>
+                  <li>Try to guess the random number randomly decided</li>
+                  <li>TIP - if you do something wrong, I will tell you via an alert</li>
+                  <li>TIP - if you guess wrong, I will tell you it's wrong</li>
+             </ul>
+
+  <input type="number" id="minBox" placeholder="Minimum"><br> <!--Box for the minimum set number-->
+  <input type="number" id="maxBox" placeholder="Maximum"><br> <!--Box for the maximum set number-->
+  <input type="number" id="guessBox" placeholder="Your Guess"><br> <!--Box for the user guess-->
+
+  <button type="button" onclick="checkGuess()">Guess</button>
+
+  <script>
+
+    let answer;
+    let attempts = 0;
+
+  function checkGuess() {
+
+    const min = Number(document.getElementById("minBox").value); //Locks in the minimum number
+    const max = Number(document.getElementById("maxBox").value); //Locks in the maximum number
+    const guess = Number(document.getElementById("guessBox").value); //Triggers the guess alerts and makes the game actually work
+
+    if (answer === undefined) {
+
+    if (min >= max) {
+        window.alert("Minimum must be less than maximum."); 
+        return;
+    }
+
+    answer = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    document.getElementById("minBox").disabled = true; //Makes it so that you can't change the numbers while playing the game
+    document.getElementById("maxBox").disabled = true;
+
+    console.log("Answer:", answer);
+}
+
+      if(isNaN(guess)){ // guess isnt a number
+        window.alert("Please enter a number. Any usage of letters will not be accepted");
+        running = false;
+      }
+      else if(guess < min){ // guess is higher than max
+        window.alert("Please enter a number higher than the set minimum. No funny business");
+        running = false;
+      } 
+      else if(guess > max){ // guess is lower than min 
+        window.alert("Please enter a number lower than the set maximum. No funny business");
+        running = false;
+      }
+      else{
+
+        //Oh also, all of the "running = false" statements are here to prevent the alert from looping forever
+
+        attempts++; //Attempts +1
+
+        if(guess < answer){ 
+          window.alert("XXX WRONG!!! Please try a higher number");
+          running = false;
+        }
+        else if(guess > answer){
+          window.alert("XXX WRONG!!! Please try a lower number");
+          running = false;
+        }
+        else{
+          window.alert("DING DING DING WE HAVE A WINNER!!! It took you " + attempts + " attempts. Your prize is an oversized teddy bear");
+          running = false; //Below this is an amazon link at a big-ahh teddy bear
+          window.alert("Refresh the page to play again!");
+          window.open("https://www.amazon.ca/MaoGoLan-Stuffed-Animal-Children-Boyfriend/dp/B08BQY696Y/ref=sr_1_5?crid=19IW2COQKYD37&dib=eyJ2IjoiMSJ9.ADhhwsi8YgdmyJ7d6PgSnPyHOhcalfFDR9rCehqhPLhE3i01aKGKjzeRGql_YMELiK6fACNlfqnbq7npQPNKNHO9OC1xn2JdhqRME3vnaR2sTxuahO1P88dzyZ3oiyg4NB_tGZSpzM7WBkCL2Ep9eAVluOE5K1bxEPYwL0SyScAh81VslVI6OE3A-nmM2kcgZF-8qjjIbC0AQfUrD-knYNCNjMC7hXI2qiI7t3z0Zas.7ahlIkrYUrWac5IP-hkj0NO7UceTM4msHqWNnY8TJyY&dib_tag=se&keywords=extra%2Blarge%2Bteddy%2Bbear&qid=1781146460&s=books&sprefix=oversized%2Bteddy%2Bbear%2Cstripbooks%2C151&sr=1-5-catcorr&th=1")
+        }
+      }
+    }
+  
+
+  </script>
+
+</body> 
+</html>
