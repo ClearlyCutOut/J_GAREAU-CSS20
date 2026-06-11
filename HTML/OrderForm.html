@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html> 
+    <head> <title>Order Form</title>
+
+
+        <script>
+
+
+        function message(form)
+
+            {   
+                let place = document.getElementById("provinces").value
+
+                if(place = "NaP"){
+                window.alert("Select a Place")
+            }
+                else if(place = "sask"){
+                window.alert("u from sask")
+            }
+                else if(place = "alb"){
+                window.alert("u from alb")
+            }
+                else if(place = "man"){
+                window.alert("u from man")
+            }
+                
+            } 
+
+
+        </script>
+
+</head>
+<body>
+
+    Pencils = 30 cents each<br><input type="number" id="#ofPencils" placeholder="Pencils"><br><br>
+    Pens = 50 cents each<br><input type="number" id="#ofPens" placeholder="Pens"><br><br>
+    Erasers = 1 dollar each<br><input type="number" id="#ofErasers" placeholder="Erasers"><br><br>
+
+
+    <form id="form1">
+
+        <label for="place">Where u from:</label><br>
+
+            <select name="provinces" id="provinces">
+            <option value="NaP">Select</option>
+            <option value="sask">Saskatchewan</option>
+            <option value="alb">Alberta</option>
+            <option value="man">Manitoba</option>
+            </select>
+
+        <input type="button" id="button1" value="Confirm" onclick="message(this.form)" ><br><br>
+
+        </form>
+
+  <script>
+
+    let pencils = .3
+    let pens = .5
+    let erasers = 1
+    let numOfPencils = 0
+    let numOfPens = 0
+    let numOfErasers = 0
+    let total = 0
+    let alberTax = 1.05
+    let saskTax = 1.11
+    let maniTax = 1.13
+
+
+  </script>
+
+</body> 
+</html>
