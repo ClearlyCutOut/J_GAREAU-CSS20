@@ -3,6 +3,69 @@
     <head>
         <title>A Balatro Website</title> 
 <link rel="stylesheet" href="Website.css">
+
+        <script>
+
+
+        function message(form)
+
+            {   
+                let favDeck = document.getElementById("decks").value
+
+                if(favDeck == "NaD"){
+                window.alert("Please Select a Deck")
+            }
+                else if(favDeck == "red"){
+                window.alert("Your favourite deck is the Red Deck")
+            }
+                else if(favDeck == "blue"){
+                window.alert("Your favourite deck is the Blue Deck")
+            }
+                else if(favDeck == "yellow"){
+                window.alert("Your favourite deck is the Yellow Deck")
+            }
+                else if(favDeck == "green"){
+                window.alert("Your favourite deck is the Green Deck")
+            }
+                else if(favDeck == "black"){
+                window.alert("Your favourite deck is the Black Deck")
+            }
+                else if(favDeck == "magic"){
+                window.alert("Your favourite deck is the Magic Deck")
+            }
+                else if(favDeck == "nebula"){
+                window.alert("Your favourite deck is the Nebula Deck")
+            }
+                else if(favDeck == "ghost"){
+                window.alert("Your favourite deck is the Ghost Deck")
+            }
+                else if(favDeck == "abandoned"){
+                window.alert("Your favourite deck is the Abandoned Deck")
+            }
+                else if(favDeck == "checkered"){
+                window.alert("Your favourite deck is the Checkered Deck")
+            }
+                else if(favDeck == "zodiac"){
+                window.alert("Your favourite deck is the Zodiac Deck")
+            }
+                else if(favDeck == "painted"){
+                window.alert("Your favourite deck is the Painted Deck")
+            }
+                else if(favDeck == "anaglyph"){
+                window.alert("Your favourite deck is the Anaglyph Deck")
+            }
+                else if(favDeck == "plasma"){
+                window.alert("Your favourite deck is the Plasma Deck")
+            }
+                else if(favDeck == "erratic"){
+                window.alert("Your favourite deck is the Erratic Deck")
+            }
+                
+            } 
+
+
+        </script>
+        
     </head>
     <body style="font-size: 30pt;"> 
                 <h1><img src="Balalalatro.jpg" alt="Balatro  title" width="15%"></h1>
@@ -36,6 +99,33 @@
             There are 15 unique decks in Balatro. The decks in Balatro in order are: Red Deck, Blue Deck, Yellow Deck,<br>
             Green Deck, Black Deck, Magic Deck, Nebula Deck, Ghost Deck, Abandoned Deck, Checkered Deck, Zodiac Deck,<br>
             Painted Deck, Anaglyph Deck, Plasma Deck, and last but not least, Erratic Deck.<br><br>
+
+        <form id="form">
+        
+                <label for="favDeck">Select your favourite deck:</label><br>
+
+                <select name="decks" id="decks" style="font-family: Balatro; font-size: 16px;">
+                <option value="NaD">Select</option>
+                <option value="red">Red Deck</option>
+                <option value="blue">Blue Deck</option>
+                <option value="yellow">Yellow Deck</option>
+                <option value="green">Green Deck</option>
+                <option value="black">Black Deck</option>
+                <option value="magic">Magic Deck</option>
+                <option value="nebula">Nebula Deck</option>
+                <option value="ghost">Ghost Deck</option>
+                <option value="abandoned">Abandoned Deck</option>
+                <option value="checkered">Checkered Deck</option>
+                <option value="zodiac">Zodiac Deck</option>
+                <option value="painted">Painted Deck</option>
+                <option value="anaglyph">Anaglyph Deck</option>
+                <option value="plasma">Plasma Deck</option>
+                <option value="erratic">Erratic Deck</option>
+                </select>
+
+            <input type="button" id="button1" value="Confirm" onclick="message(this.form)" ><br><br>
+
+        </form>
 
             <img src="RedDeck.png" alt="Image of the Red Deck" width="5%"><br>
             Red Deck:<br>
