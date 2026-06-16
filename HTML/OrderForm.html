@@ -1,72 +1,102 @@
 <!DOCTYPE html>
-<html> 
-    <head> <title>Order Form</title>
+<html>
+<head>
+    <title>Lay Order Forme</title>
 
+    <script>
+        // Prices
+        let pencils = 0.30;
+        let pens = 0.50;
+        let erasers = 1.00;
 
-        <script>
+        // Tax rates
+        let alberTax = 1.05;
+        let saskTax = 1.11;
+        let maniTax = 1.13;
 
+        function message() {
 
-        function message(form)
+            let place = document.getElementById("provinces").value;
 
-            {   
-                let place = document.getElementById("provinces").value
-
-                if(place == "NaP"){
-                window.alert("Select a Place")
+            if (place == "NaP") {
+                window.alert("Select a Place");
+                return;
             }
-                else if(place == "sask"){
-                window.alert("u from sask")
-            }
-                else if(place == "alb"){
-                window.alert("u from alb")
-            }
-                else if(place == "man"){
-                window.alert("u from man")
-            }
-                
-            } 
 
+            // Gets number of items from user
+            let numOfPencils = Number(document.getElementById("numOfPencils").value) || 0;
+            let numOfPens = Number(document.getElementById("numOfPens").value) || 0;
+            let numOfErasers = Number(document.getElementById("numOfErasers").value) || 0;
 
-        </script>
+            // Calculates subtotal
+            let subtotal =
+                (numOfPencils * pencils) +
+                (numOfPens * pens) +
+                (numOfErasers * erasers);
 
+            let total;
+
+            // Applies the tax
+            if (place == "sask") {
+                total = subtotal * saskTax;
+
+                // Saskatchewan-ian discount
+                if (total >= 30) {
+                    total = total - 5;
+                }
+            }
+            else if (place == "alb") {
+                total = subtotal * alberTax;
+            }
+            else if (place == "man") {
+                total = subtotal * maniTax;
+            }
+            if (place == "sask" && (subtotal * saskTax) >= 30) {
+            window.alert(
+                "Subtotal: $" + subtotal.toFixed(2) +
+                "\nAmount met for Saskatchewan-ian Discount: -$5.00" +
+                "\nTotal: $" + total.toFixed(2)
+            );
+        }
+        else {
+            window.alert(
+                "Subtotal: $" + subtotal.toFixed(2) +
+                "\nTotal: $" + total.toFixed(2)
+            );
+        }
+    }
+        
+    </script>
 </head>
+
 <body>
 
-    Pencils = 30 cents each<br><input type="number" id="#ofPencils" placeholder="Pencils"><br><br>
-    Pens = 50 cents each<br><input type="number" id="#ofPens" placeholder="Pens"><br><br>
-    Erasers = 1 dollar each<br><input type="number" id="#ofErasers" placeholder="Erasers"><br><br>
+    <h2>Jordan's very cool and very boring order form "JVCAVBOF"</h2>
 
+    Pencils = $0.30 each<br>
+    <input type="number" id="numOfPencils" placeholder="Pencils" min="0">
+    <br><br>
 
-    <form id="form1">
+    Pens = $0.50 each<br>
+    <input type="number" id="numOfPens" placeholder="Pens" min="0">
+    <br><br>
 
-        <label for="place">Where u from:</label><br>
+    Erasers = $1.00 each<br>
+    <input type="number" id="numOfErasers" placeholder="Erasers" min="0">
+    <br><br>
 
-            <select name="provinces" id="provinces">
-            <option value="NaP">Select</option>
-            <option value="sask">Saskatchewan</option>
-            <option value="alb">Alberta</option>
-            <option value="man">Manitoba</option>
-            </select>
+    <label for="provinces">Where are you from?</label><br>
 
-        <input type="button" id="button1" value="Confirm" onclick="message(this.form)" ><br><br>
+    <select id="provinces">
+        <option value="NaP">Select</option>
+        <option value="sask">Saskatchewan</option>
+        <option value="alb">Alberta</option>
+        <option value="man">Manitoba</option>
+    </select>
 
-        </form>
+    <br><br>
 
-  <script>
+    <input type="button" value="Confirm Order" onclick="message()">
 
-    let pencils = .3
-    let pens = .5
-    let erasers = 1
-    let numOfPencils = 0
-    let numOfPens = 0
-    let numOfErasers = 0
-    let total = 0
-    let alberTax = 1.05
-    let saskTax = 1.11
-    let maniTax = 1.13
-
-
-  </script>
-
-</body> 
+</body>
 </html>
