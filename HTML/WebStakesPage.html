@@ -3,6 +3,52 @@
     <head>
         <title>A Balatro Website</title> 
 <link rel="stylesheet" href="Website.css">
+
+
+        <script>
+
+
+        function message(form)
+
+            {   
+                let favDeck = document.getElementById("decks").value
+
+                if(favDeck == "NaD"){
+                window.alert("Please Select a Stake")
+            }
+                else if(favDeck == "none"){
+                window.alert("You either haven't played Balatro or you are just getting started.")
+            }
+                else if(favDeck == "white"){
+                window.alert("Hey! You most likely clicked this because you only have beaten the White Stake, or you just like the White Stake. Either way, good job on beating the first stake!")
+            }
+                else if(favDeck == "red"){
+                window.alert("You beat the second easiest stake, keep going!")
+            }
+                else if(favDeck == "green"){
+                window.alert("Now it's too late to go back. Now you have to finish beating all of the stakes.")
+            }
+                else if(favDeck == "black"){
+                window.alert("You are now getting into the Balatro deep end. Gotta keep pushing, only gets harder from here...")
+            }
+                else if(favDeck == "blue"){
+                window.alert("Now its getting diffucult, congrats on beating the Blue Stake!")
+            }
+                else if(favDeck == "purple"){
+                window.alert("2 to go! You can do it!")
+            }
+                else if(favDeck == "orange"){
+                window.alert("The only hurdle you have left to jump over is gold stake, you got this!")
+            }
+                else if(favDeck == "gold"){
+                window.alert("GG!")
+            }
+                
+            } 
+
+
+        </script>
+        
     </head>
     <body style="font-size: 30pt;"> 
                 <h1><img src="Balalalatro.jpg" alt="Balatro  title" width="15%"></h1>
@@ -38,6 +84,28 @@
         and lastly, the Gold Stake. The stakes scale, which means the debuff in Red Stake will<br>
         be in all future stakes, and this applies to all of them. The higher the stake, the more<br>
         planning and strategizing is required.<br><br>
+
+                <form id="form">
+        
+                <label for="favDeck">Select your hardest stake completion:</label><br>
+
+                <select name="decks" id="decks" style="font-family: Balatro; font-size: 16px;">
+                <option value="NaD">Select</option>
+                <option value="none">None</option>
+                <option value="white">White Stake</option>
+                <option value="red">Red Stake</option>
+                <option value="green">Green Stake</option>
+                <option value="black">Black Stake</option>
+                <option value="blue">Blue Stake</option>
+                <option value="purple">Purple Stake</option>
+                <option value="orange">Orange Stake</option>
+                <option value="gold">Gold Stake</option>
+
+                </select>
+
+            <input type="button" id="button1" value="Confirm" onclick="message(this.form)" ><br><br>
+
+        </form>
 
         <img src="White_stake.png" alt="Image of the White Stake" width="5%"><br>
         White Stake:<br>
