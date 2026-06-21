@@ -4,6 +4,36 @@
         <title>A Balatro Website</title> 
         <meta name="google-site-verification" content="faPPqXJkkc54LeHjmz7DLdGOii89VvzigmiBwKRJ670" />
 <link rel="stylesheet" href="Website.css">
+
+        <script>
+
+
+            function message(form) {
+
+            let selectElement = document.getElementById("choice");
+            let choice = selectElement.value;
+
+            if (choice == "NaD") {
+                window.alert("Please select yes or no");
+                return;
+            }
+
+            let info = document.getElementById("infoSection");
+
+            if (choice == "yes") {
+                document.getElementById("p1").textContent =
+                    "Oh so you have! Great I can skip telling you what it is about";
+
+                info.style.display = "none"; // hides game info
+
+            } else if (choice == "no") {
+                window.alert("Oh boy! Do I have do I have stuff to show you...");
+                info.style.display = "block"; // shows game info
+            }
+        }
+
+
+        </script>
     </head>
     <body style="font-size: 30pt;"> 
         <h1><img src="Balalalatro.jpg" alt="Balatro title" width="15%"></h1>
@@ -46,6 +76,25 @@
          </p><br>
                     <!--Very basic info about Balatro and the developer-->
 
+
+                            <form id="form">
+        
+                <label for="favDeck">Have you played Balatro?</label><br>
+
+                <select name="choice" id="choice" style="font-family: Balatro; font-size: 32px;">
+                <option value="NaD">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+                </select>
+
+            <input type="button" id="button1" class="large-btn" style="font-family: Balatro; font-size: 32px" value="Confirm" onclick="message(this.form)" ><br><br>
+
+        </form>
+
+        <p id="p1"> Select yes or no! </p>
+
+        <div id="infoSection" style="display: none;">
+
          <h1 style="text-align: left; margin: 10px; font-size: 38pt;">About Balatro</h1><br>
         <p style="text-align: left; margin: 10px;">
             Balatro is a poker-themed roguelike deck-building game developed by solo developer LocalThunk,<br>
@@ -83,6 +132,8 @@
                 <a href="https://www.youtube.com/playlist?list=PLdNGt-ihEAcGhRJdmNr5ZRqP-MIDRF_su" style="color: red;" target="_blank">
                 Click this to go to the Balatro University Crash Course on YouTube!</a><br>
             Now that you know about the game, you can go to the other pages to learn about everything else in the game more in depth!<br>
+
+            </div>
         </p>
     </body> 
 </html>
