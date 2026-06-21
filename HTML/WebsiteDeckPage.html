@@ -2,6 +2,7 @@
 <html> 
     <head>
         <title>A Balatro Website</title> 
+
 <link rel="stylesheet" href="Website.css">
 
         <script>
@@ -10,10 +11,15 @@
         function message(form)
 
             {   
-                let favDeck = document.getElementById("decks").value
+
+                 let selectElement = document.getElementById("decks");
+                 let favDeck = selectElement.value;
+                 let favDeckText = selectElement.options[selectElement.selectedIndex].text;
+
 
                 if(favDeck == "NaD"){
                 window.alert("Please Select a Deck")
+                return;
             }
                 else if(favDeck == "red"){
                 window.alert("You like having the extra discard.")
@@ -60,6 +66,8 @@
                 else if(favDeck == "erratic"){
                 window.alert("You love early game chaos.")
             }
+
+            document.getElementById("p1").textContent = "Your favourite deck is the " + favDeckText + ".";
                 
             } 
 
@@ -67,9 +75,13 @@
         </script>
         
     </head>
+
     <body style="font-size: 30pt;"> 
+
                 <h1><img src="Balalalatro.jpg" alt="Balatro  title" width="15%"></h1>
+
         <nav class="navbar">
+
                 <ul>
                     <li><a href="Website.html">Main Page</a></li>
                     <li><a href="WebsiteDeckPage.html">Decks</a></li>
@@ -92,9 +104,13 @@
                     <li><a href ="WebTips&TricksPage.html #Enhancements">Enhancments</a></li>
                         </ul></li>
                     <li><a href ="WebCreditsPage.html">Credits</a></li>
+
                 </ul>
+
          </nav>
+
         <h1 style="text-align: left; margin: 10px; font-size: 38pt;">Decks</h1><br><br>
+        
        <p style="text-align: left; margin: 10px;">
             There are 15 unique decks in Balatro. The decks in Balatro in order are: Red Deck, Blue Deck, Yellow Deck,<br>
             Green Deck, Black Deck, Magic Deck, Nebula Deck, Ghost Deck, Abandoned Deck, Checkered Deck, Zodiac Deck,<br>
@@ -104,7 +120,7 @@
         
                 <label for="favDeck">Select your favourite deck:</label><br>
 
-                <select name="decks" id="decks" style="font-family: Balatro; font-size: 16px;">
+                <select name="decks" id="decks" style="font-family: Balatro; font-size: 32px;">
                 <option value="NaD">Select</option>
                 <option value="red">Red Deck</option>
                 <option value="blue">Blue Deck</option>
@@ -123,9 +139,12 @@
                 <option value="erratic">Erratic Deck</option>
                 </select>
 
-            <input type="button" id="button1" value="Confirm" onclick="message(this.form)" ><br><br>
+            <input type="button" id="button1" class="large-btn" style="font-family: Balatro; font-size: 32px" value="Confirm" onclick="message(this.form)" ><br><br>
 
         </form>
+
+                <p id="p1"> Just wait look here when you click your favourite deck &#128527; </p>
+
 
             <img src="RedDeck.png" alt="Image of the Red Deck" width="5%"><br>
             Red Deck:<br>

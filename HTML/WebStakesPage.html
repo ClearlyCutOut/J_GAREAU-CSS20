@@ -11,36 +11,39 @@
         function message(form)
 
             {   
-                let favDeck = document.getElementById("decks").value
+                let selectElement = document.getElementById("stakes");
+                let favStake = selectElement.value;
+                let favStakeText = selectElement.options[selectElement.selectedIndex].text
 
-                if(favDeck == "NaD"){
+                if(favStake == "NaD"){
                 window.alert("Please Select a Stake")
+                return;
             }
-                else if(favDeck == "none"){
+                else if(favStake == "none"){
                 window.alert("You either haven't played Balatro or you are just getting started.")
             }
-                else if(favDeck == "white"){
+                else if(favStake == "white"){
                 window.alert("Hey! You most likely clicked this because you only have beaten the White Stake, or you just like the White Stake. Either way, good job on beating the first stake!")
             }
-                else if(favDeck == "red"){
+                else if(favStake == "red"){
                 window.alert("You beat the second easiest stake, keep going!")
             }
-                else if(favDeck == "green"){
+                else if(favStake == "green"){
                 window.alert("Now it's too late to go back. Now you have to finish beating all of the stakes.")
             }
-                else if(favDeck == "black"){
+                else if(favStake == "black"){
                 window.alert("You are now getting into the Balatro deep end. Gotta keep pushing, only gets harder from here...")
             }
-                else if(favDeck == "blue"){
+                else if(favStake == "blue"){
                 window.alert("Now its getting diffucult, congrats on beating the Blue Stake!")
             }
-                else if(favDeck == "purple"){
+                else if(favStake == "purple"){
                 window.alert("2 to go! You can do it!")
             }
-                else if(favDeck == "orange"){
+                else if(favStake == "orange"){
                 window.alert("The only hurdle you have left to jump over is gold stake, you got this!")
             }
-                else if(favDeck == "gold"){
+                else if(favStake == "gold"){
                 window.alert("GG!")
             }
                 
@@ -87,9 +90,9 @@
 
                 <form id="form">
         
-                <label for="favDeck">Select your hardest stake completion:</label><br>
+                <label for="favStake">Select your hardest stake completion:</label><br>
 
-                <select name="decks" id="decks" style="font-family: Balatro; font-size: 16px;">
+                <select name="stakes" id="stakes" style="font-family: Balatro; font-size: 32px;">
                 <option value="NaD">Select</option>
                 <option value="none">None</option>
                 <option value="white">White Stake</option>
@@ -103,9 +106,11 @@
 
                 </select>
 
-            <input type="button" id="button1" value="Confirm" onclick="message(this.form)" ><br><br>
+            <input type="button" id="button1" class="large-btn" style="font-family: Balatro; font-size: 32px" value="Confirm" onclick="message(this.form)" ><br><br>
 
         </form>
+
+        <p id="p1"> Just wait look here when you click your favourite Stake &#128527; </p>
 
         <img src="White_stake.png" alt="Image of the White Stake" width="5%"><br>
         White Stake:<br>
