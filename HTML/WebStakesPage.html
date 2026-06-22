@@ -13,7 +13,7 @@
             {   
                 let selectElement = document.getElementById("stakes");
                 let favStake = selectElement.value;
-                let favStakeText = selectElement.options[selectElement.selectedIndex].text
+                let favStakeText = selectElement.options[selectElement.selectedIndex].text //same kinda thing here
 
                 if(favStake == "NaD"){
                 window.alert("Please Select a Stake")
@@ -46,6 +46,8 @@
                 else if(favStake == "gold"){
                 window.alert("GG!")
             }
+
+            document.getElementById("p1").textContent = "Your hardest stake completion is the " + favStakeText + "!";
                 
             } 
 
@@ -110,7 +112,7 @@
 
         </form>
 
-        <p id="p1"> Just wait look here when you click your favourite Stake &#128527; </p>
+        <p id="p1"> Ah! I gotta hide! Quick select a stake! 😨 </p>
 
         <img src="White_stake.png" alt="Image of the White Stake" width="5%"><br>
         White Stake:<br>

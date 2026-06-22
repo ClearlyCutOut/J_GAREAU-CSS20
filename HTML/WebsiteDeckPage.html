@@ -14,7 +14,7 @@
 
                  let selectElement = document.getElementById("decks");
                  let favDeck = selectElement.value;
-                 let favDeckText = selectElement.options[selectElement.selectedIndex].text;
+                 let favDeckText = selectElement.options[selectElement.selectedIndex].text; //variables used for changing text on the page
 
 
                 if(favDeck == "NaD"){
@@ -37,10 +37,10 @@
                 window.alert("You, are wrong.")
             }
                 else if(favDeck == "magic"){
-                window.alert("Your favourite deck is the Magic Deck.")
+                window.alert("You like The Fool.")
             }
                 else if(favDeck == "nebula"){
-                window.alert("You like The Fool.")
+                window.alert("You like planet cards.")
             }
                 else if(favDeck == "ghost"){
                 window.alert("You like spectral cards.")
@@ -120,7 +120,7 @@
         
                 <label for="favDeck">Select your favourite deck:</label><br>
 
-                <select name="decks" id="decks" style="font-family: Balatro; font-size: 32px;">
+                <select name="decks" id="decks" style="font-family: Balatro; font-size: 32px;"> <!-- Choose ur fav deck -->
                 <option value="NaD">Select</option>
                 <option value="red">Red Deck</option>
                 <option value="blue">Blue Deck</option>
@@ -143,7 +143,7 @@
 
         </form>
 
-                <p id="p1"> Just wait look here when you click your favourite deck &#128527; </p>
+                <p id="p1"> Just wait look here when you click your favourite deck 😏 </p>
 
 
             <img src="RedDeck.png" alt="Image of the Red Deck" width="5%"><br>
