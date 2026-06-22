@@ -3,6 +3,55 @@
     <head>
         <title>A Balatro Website</title> 
 <link rel="stylesheet" href="Website.css">
+
+
+        <script>
+
+
+        function message(form)
+
+            {   
+                let selectElement = document.getElementById("stakes");
+                let favStake = selectElement.value;
+                let favStakeText = selectElement.options[selectElement.selectedIndex].text
+
+                if(favStake == "NaD"){
+                window.alert("Please Select a Stake")
+                return;
+            }
+                else if(favStake == "none"){
+                window.alert("You either haven't played Balatro or you are just getting started.")
+            }
+                else if(favStake == "white"){
+                window.alert("Hey! You most likely clicked this because you only have beaten the White Stake, or you just like the White Stake. Either way, good job on beating the first stake!")
+            }
+                else if(favStake == "red"){
+                window.alert("You beat the second easiest stake, keep going!")
+            }
+                else if(favStake == "green"){
+                window.alert("Now it's too late to go back. Now you have to finish beating all of the stakes.")
+            }
+                else if(favStake == "black"){
+                window.alert("You are now getting into the Balatro deep end. Gotta keep pushing, only gets harder from here...")
+            }
+                else if(favStake == "blue"){
+                window.alert("Now its getting diffucult, congrats on beating the Blue Stake!")
+            }
+                else if(favStake == "purple"){
+                window.alert("2 to go! You can do it!")
+            }
+                else if(favStake == "orange"){
+                window.alert("The only hurdle you have left to jump over is gold stake, you got this!")
+            }
+                else if(favStake == "gold"){
+                window.alert("GG!")
+            }
+                
+            } 
+
+
+        </script>
+        
     </head>
     <body style="font-size: 30pt;"> 
                 <h1><img src="Balalalatro.jpg" alt="Balatro  title" width="15%"></h1>
@@ -38,6 +87,30 @@
         and lastly, the Gold Stake. The stakes scale, which means the debuff in Red Stake will<br>
         be in all future stakes, and this applies to all of them. The higher the stake, the more<br>
         planning and strategizing is required.<br><br>
+
+                <form id="form">
+        
+                <label for="favStake">Select your hardest stake completion:</label><br>
+
+                <select name="stakes" id="stakes" style="font-family: Balatro; font-size: 32px;">
+                <option value="NaD">Select</option>
+                <option value="none">None</option>
+                <option value="white">White Stake</option>
+                <option value="red">Red Stake</option>
+                <option value="green">Green Stake</option>
+                <option value="black">Black Stake</option>
+                <option value="blue">Blue Stake</option>
+                <option value="purple">Purple Stake</option>
+                <option value="orange">Orange Stake</option>
+                <option value="gold">Gold Stake</option>
+
+                </select>
+
+            <input type="button" id="button1" class="large-btn" style="font-family: Balatro; font-size: 32px" value="Confirm" onclick="message(this.form)" ><br><br>
+
+        </form>
+
+        <p id="p1"> Just wait look here when you click your favourite Stake &#128527; </p>
 
         <img src="White_stake.png" alt="Image of the White Stake" width="5%"><br>
         White Stake:<br>
